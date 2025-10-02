@@ -27,7 +27,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY app ./app
 
 # Document the port; publish with -p at runtime
-EXPOSE 3011
+EXPOSE 8000
 
-# Run the FastAPI + FastMCP app with uvicorn via uv
-CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "3011"]
+# Run the FastMCP app
+CMD ["uv", "run", "python", "-m", "app.main"]
