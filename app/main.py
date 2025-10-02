@@ -22,6 +22,15 @@ def get_star() -> ImageContent:
     img = Image(data=img_data, format="png")
     return img.to_image_content()
 
+@mcp.tool()
+def get_star_link() -> str:
+    """
+    Fetches the star image and returns it in MCP image content format.
+    """
+    # URL of the star image
+    url = "https://raw.githubusercontent.com/cannin/cannin.github.io/refs/heads/master/images/star_big.png"
+    return url
+
 @mcp.tool
 def greet(name: str) -> str:
     """Return a greeting for the given name."""
