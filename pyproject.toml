@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Minimal FastMCP + FastAPI server with a time tool and health check."
 requires-python = ">=3.11"
 dependencies = [
-  "fastmcp>=2.11",
+  "fastmcp==2.12.4",
   "fastapi",
   "matplotlib",
   "numpy",
