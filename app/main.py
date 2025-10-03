@@ -26,6 +26,7 @@ s3 = boto3.client("s3", region_name=AWS_REGION)
 HOSTNAME = os.environ.get("HOSTNAME", "localhost")
 PORT = os.environ.get("PORT", 8000)
 
+# FROM: stateless_http: https://dev.to/andreasbergstrom/using-fastmcp-with-openai-and-avoiding-session-termination-issues-k3h
 mcp = FastMCP("test-mcp", stateless_http=True)
 
 
