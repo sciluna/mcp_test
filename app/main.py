@@ -26,7 +26,7 @@ s3 = boto3.client("s3", region_name=AWS_REGION)
 HOSTNAME = os.environ.get("HOSTNAME", "localhost")
 PORT = os.environ.get("PORT", 8000)
 
-mcp = FastMCP("test-mcp")
+mcp = FastMCP("test-mcp", stateless_http=True)
 
 
 def _s3_object_url(bucket: str, key: str, region: str) -> str:
