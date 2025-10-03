@@ -134,4 +134,4 @@ def plot_sine_wave(
 
 
 if __name__ == "__main__":
-    mcp.run(transport="http", host="0.0.0.0", port=PORT)
+    mcp.run(transport="sse", host="0.0.0.0", port=PORT)
