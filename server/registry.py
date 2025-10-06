@@ -12,4 +12,4 @@ def register_all(mcp: FastMCP) -> None:
     assets_adapter.register(mcp)
     general_adapter.register(mcp)
     plotting_adapter.register(mcp)
-    search_adapter.register(mcp)
+    #search_adapter.register(mcp)
