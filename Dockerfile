@@ -21,13 +21,14 @@ COPY pyproject.toml ./
 
 # Install dependencies (no lockfile; resolves fresh each time)
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --no-dev
+    uv sync --no-dev --extra mcp
 
-# Copy app code
-COPY app ./app
+# Copy project packages
+COPY tools ./tools
+COPY server ./server
 
 # Document the port; publish with -p at runtime
 EXPOSE 8000
 
 # Run the FastMCP app
-CMD ["uv", "run", "python", "-m", "app.main"]
+CMD ["uv", "run", "python", "-m", "server.app"]
