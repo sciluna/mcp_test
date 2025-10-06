@@ -8,7 +8,7 @@ from tools import general
 
 
 def register(mcp: FastMCP) -> None:
-    """Register general-purpose tools such as greet/time/health."""
+    """Register general-purpose tools."""
 
     @mcp.tool()
     def greet(name: str) -> str:
@@ -21,3 +21,12 @@ def register(mcp: FastMCP) -> None:
     @mcp.tool()
     def health() -> dict:
         return general.health()
+
+    @mcp.tool()
+    def search(query: str) -> dict:
+        return general.search(query)
+
+
+    @mcp.tool()
+    def fetch(id: str) -> dict:
+        return general.fetch(id)
