@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - `tools/` holds the framework-agnostic helpers (assets, general utilities, plotting, and `search.py` retriever wrappers). Keep this package independent of FastMCP so it remains portable across CLIs, notebooks, or services.
-- `server/` adapts `tools` into FastMCP tools: `server/app.py` builds the app, `server/registry.py` registers adapters, and `server/adapters/` exposes each functional area (assets, general, plotting, search).
+- `server/` adapts `tools` into FastMCP tools: `server/app.py` builds the app, `server/registry.py` registers adapters, and `server/adapters/` exposes each functional area (general adapter now handles greetings, health, search/fetch helpers, and asset tools; plotting and search stay isolated).
 - Project metadata lives in `pyproject.toml`; build packaging uses the root `Dockerfile`. Populate runtime configuration in `.env` with project-specific values.
 
 ## Build, Test, and Development Commands
