@@ -97,14 +97,3 @@ def pubmed_central_search(query: str, max_results: int = 10) -> List[Dict[str, A
     retriever = PubMedCentralSearch(query)
     return _normalize(retriever.search(max_results=max_results))
 
-
-__all__ = [
-    "duckduckgo_search",
-    "google_custom_search",
-    "searx_search",
-    "serpapi_google",
-    "tavily_search",
-    "arxiv_search",
-    "semantic_scholar_search",
-    "pubmed_central_search",
-]

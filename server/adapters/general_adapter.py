@@ -33,6 +33,10 @@ def register(mcp: FastMCP) -> None:
         return general.fetch(id)
 
     @mcp.tool()
+    def cdbai_chat(chat: str) -> str:
+        return general.cdbai_chat(chat)
+
+    @mcp.tool()
     def get_star() -> ImageContent:
         data = assets.fetch_star_image()
         return Image(data=data, format="png").to_image_content()

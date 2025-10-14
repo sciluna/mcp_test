@@ -1,7 +1,7 @@
 """Framework-agnostic utilities used across MCP adapters and other runtimes."""
 
 from .assets import fetch_star_image, get_star_link
-from .general import get_time, greet, health
+from .general import cdbai_chat, get_time, greet, health
 from .plotting import generate_sine_wave_plot
 from .search import (
     arxiv_search,
@@ -17,6 +17,7 @@ from .search import (
 __all__ = [
     "fetch_star_image",
     "get_star_link",
+    "cdbai_chat",
     "get_time",
     "greet",
     "health",

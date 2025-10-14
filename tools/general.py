@@ -5,6 +5,8 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Dict
 
+from cdbai import cdbai_chat as _cdbai_chat
+
 
 def greet(name: str) -> str:
     """Return a friendly greeting for the supplied name."""
@@ -35,3 +37,8 @@ def fetch(id: str) -> dict:
         "content": "Full content text …",
         "metadata": "data"
     }
+
+
+def cdbai_chat(prompt: str) -> str:
+    """Return the JSON payload from the CDBAI chat service for the supplied prompt."""
+    return _cdbai_chat(prompt)

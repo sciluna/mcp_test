@@ -8,7 +8,9 @@ dependencies = [
   "numpy",
   "requests",
   "gpt-researcher",
-  "ddgs"
+  "ddgs",
+  "flashtext",
+  "cdbai @ git+https://github.com/cannin/cdbai_chat.git"
 ]
 
 [project.optional-dependencies]
