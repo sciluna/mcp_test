@@ -41,7 +41,7 @@ def duckduckgo_search(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
 
 def google_custom_search(
     query: str,
-    max_results: int = 7,
+    max_results: int = 10,
     query_domains: Optional[List[str]] = None,
 ) -> List[Dict[str, Any]]:
     """Google Programmable Search (requires GOOGLE_API_KEY and GOOGLE_CX_KEY)."""

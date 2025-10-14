@@ -15,7 +15,7 @@ def register(mcp: FastMCP) -> None:
         return search.duckduckgo_search(query=query, max_results=max_results)
 
     @mcp.tool(name="google_custom_search")
-    def google_custom_search(query: str, max_results: int = 7, query_domains: list[str] | None = None):
+    def google_custom_search(query: str, max_results: int = 10, query_domains: list[str] | None = None):
         return search.google_custom_search(query=query, max_results=max_results, query_domains=query_domains)
 
     @mcp.tool(name="searx_search")
