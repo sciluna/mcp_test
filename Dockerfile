@@ -2,7 +2,7 @@
 FROM python:3.12-slim-trixie
 
 # The installer requires curl (and certificates) to download the release archive
-RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates \
+RUN apt-get update && apt-get install -y --no-install-recommends curl git ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Download the latest installer
