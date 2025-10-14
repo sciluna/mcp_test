@@ -29,6 +29,10 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY tools ./tools
 COPY server ./server
 
+# Copy fonts
+COPY fonts/*.ttf /usr/share/fonts/truetype/custom/
+RUN fc-cache -f -v
+
 # Document the port; publish with -p at runtime
 EXPOSE 8000
 
