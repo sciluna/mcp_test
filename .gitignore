@@ -218,3 +218,4 @@ __marimo__/
 # Project
 mcp_test_litellm.txt
 mcp_test_litellm_openai.py
+/output

@@ -7,9 +7,12 @@ from fastmcp import FastMCP
 from .registry import register_all
 
 
+__version__ = "0.0.5"
+
+
 def create_app() -> FastMCP:
     """Create a FastMCP instance and register all available tools."""
-    mcp = FastMCP('cdbai-mcp', stateless_http=True)
+    mcp = FastMCP(f"cdbai-mcp: {__version__}", stateless_http=True)
     register_all(mcp)
     return mcp
 
