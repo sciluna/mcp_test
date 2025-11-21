@@ -58,18 +58,18 @@ def _upload_png(data: bytes, key: str, public: bool) -> str:
 def register(mcp: FastMCP) -> None:
     """Register plotting-related tools backed by the tools package."""
 
-    @mcp.tool()
-    def plot_sine_wave(
-        frequency: float = 1.0,
-        duration: float = 2.0,
-        sample_rate: int = 500,
-        public: bool = True,
-    ) -> str:
-        """Generate a sine wave plot, upload to S3, and return the accessible URL."""
+    # @mcp.tool()
+    # def plot_sine_wave(
+    #     frequency: float = 1.0,
+    #     duration: float = 2.0,
+    #     sample_rate: int = 500,
+    #     public: bool = True,
+    # ) -> str:
+    #     """Generate a sine wave plot, upload to S3, and return the accessible URL."""
 
-        key, png_data = plotting.generate_sine_wave_plot(
-            frequency=frequency,
-            duration=duration,
-            sample_rate=sample_rate,
-        )
-        return _upload_png(png_data, key, public)
+    #     key, png_data = plotting.generate_sine_wave_plot(
+    #         frequency=frequency,
+    #         duration=duration,
+    #         sample_rate=sample_rate,
+    #     )
+    #     return _upload_png(png_data, key, public)
