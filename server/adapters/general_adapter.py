@@ -32,12 +32,12 @@ def register(mcp: FastMCP) -> None:
     def fetch(id: str) -> dict:
         return general.fetch(id)
 
-    @mcp.tool()
+    @mcp.tool(enabled=False)
     def get_star() -> ImageContent:
         data = assets.fetch_star_image()
         return Image(data=data, format="png").to_image_content()
 
-    @mcp.tool()
+    @mcp.tool(enabled=False)
     def get_star_link() -> str:
         return assets.get_star_link()
 
