@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.7-labs
 FROM python:3.12-slim-trixie
 
-RUN echo "v0.3.1"
+RUN echo "v0.3.2"
 
 # The installer requires curl (and certificates) to download the release archive
 RUN apt-get update && apt-get install -y --no-install-recommends git curl ca-certificates fontconfig fonts-dejavu-core \
