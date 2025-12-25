@@ -1,6 +1,6 @@
 [project]
 name = "cdbai-mcp-server"
-version = "0.0.6"
+version = "0.1.1"
 description = "Minimal FastMCP server with various tools."
 requires-python = ">=3.11"
 dependencies = [
