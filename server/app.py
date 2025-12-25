@@ -8,6 +8,8 @@ from .registry import register_all
 import tomllib
 from pathlib import Path
 
+import cdbai
+
 
 def _load_version():
     # Locate pyproject.toml relative to this file
@@ -26,12 +28,13 @@ def _load_version():
 
 def create_app() -> FastMCP:
     """Create a FastMCP instance and register all available tools."""
-    mcp = FastMCP(f"cdbai-mcp: {__version__}", stateless_http=True)
+    mcp = FastMCP(f"cdbai-mcp: {__version__}, cdbai_chat: {__cdbai_version__}", stateless_http=True)
     register_all(mcp)
     return mcp
 
 
 __version__ = _load_version()
+__cdbai_version__ = cdbai.__version__
 
 if __name__ == "__main__":
     app = create_app()
