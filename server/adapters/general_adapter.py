@@ -60,7 +60,7 @@ def register(mcp: FastMCP) -> None:
                 ]
 
         Notes:
-            - The data is limited to 512000 rows; make sure the user is aware
+            - The data is limited to 750000 rows; make sure the user is aware
             - For queries requesting a plot  will return a link to a PNG image that should be embedded; results should be returned as Markdown that embeds the plot image
             - Other links to CSV data, SVG image, and Python code be returned as part of the answer to increase scientific transparency
             - This would not be appropriate if the user requests patient data
