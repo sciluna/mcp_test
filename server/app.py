@@ -7,7 +7,7 @@ from fastmcp import FastMCP
 from .registry import register_all
 
 
-__version__ = "0.0.5"
+__version__ = "0.1.2"
 
 
 def create_app() -> FastMCP:
